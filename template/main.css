@@ -1,0 +1,93 @@
+/**General Styles**/
+@font-face {
+  font-family: segoe;
+  src: url('images/segoe.ttf');
+}
+body {
+  background: #ffffff url('images/star-header.jpg') repeat-x;
+  font-family: arial;
+  margin: 0px;
+}
+#wrapper {
+  width: 800px;
+  margin: 0 auto;
+  clear: both;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #002489;
+  font-weight: bold;
+  font-family:segoe,verdana, arial
+}
+p {
+  line-height: 30px;
+  margin-left: ;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0040FF;
+ }
+ a:hover {
+   color: #1D991D;
+ }
+
+/**Header**/
+#header #froggy {
+  height: 450px;
+  width: 400px;
+  background: url('images/lfroggy.png') no-repeat left top;
+  position: absolute;
+}
+#header h1 {
+  height: 200px;
+  width: 700px;
+  background: url('images/logo.png') no-repeat center top;
+  font-size: 0px;
+  margin: 0px auto;
+}
+
+/**Content**/
+#content {
+  width:600px;
+  margin: 0 auto;
+}
+.border {
+  margin-top: 20px;
+  border: 2px #8BA9F9 solid;
+  border-radius: 20px;
+  padding: 10px;
+}
+input {
+  color: #000;
+  border: 1px solid #000; 
+  border-radius: 10px;
+  padding: 0px 5px;
+  }
+label {
+  font-weight: bold;
+  width: 200px;
+  display: inline-block;
+  text-align: left;
+}
+label[for="list_students"]{
+  width: 20px;
+  font-size:24px;
+  display:inline-block;
+  vertical-align: top;
+  float: left;
+  margin-left: 20px;
+  }
+textarea {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+}
+.center {
+  text-align: center;
+}
+input[type=image] {
+  border: 0px;
+  background: #fff;
+}

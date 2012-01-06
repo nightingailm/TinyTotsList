@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Barbara's Tiny Tots</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+  <div id="header">
+    <div id="froggy"></div>
+    <h1>Barbara's Tiny Tots</h1>
+  </div>
+  <div id="wrapper">
+    <div id="content">
+      <h1>New Class List</h1>
+
+      <p>Hello, and welcome! Please enter the list of names in your class below. Separate each name with a new line. Make a new line by pressing the Enter key.</p>
+
+      <div class="border center">    
+        <form method="post" action="/list/save">
+
+          <p><label for="list_students">Students</label><textarea rows="20" cols="35" name="list[students]" id="list_students"></textarea><input type="hidden" name="list[list]" id="list_list" />
+        <input type="hidden" name="list[_csrf_token]" value="60512b62b3c3a24a304b6fb73e0eb922" id="list__csrf_token" /></p>
+          <p><input type="image" src="images/save&print.gif" value="Save &amp; Print!" /></p>
+
+        </form>
+      </div> 
+
+      <h1>Recent Class Lists</h1>
+
+        <ul>
+          <li><a href="/list/1">List 1</a> (edited on 12/24/2011)</li>
+        </ul>  
+    </div>
+  </div>
+
+</body>
+</html>

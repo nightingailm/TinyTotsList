@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Barbara's Tiny Tots</title>
+  <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+  <div id="header">
+    <div id="froggy"></div>
+    <h1>Barbara's Tiny Tots</h1>
+  </div>
+
+  <div id="wrapper"> 
+    <div id="content">
+      <h1>Welcome to Barbara's Tiny Tots!</h1>
+      <p>This site was made for Barbara by her loving future son-in-law. It was also designed by her daughter :). Use this site to make pages of name lists.</p>
+      <p>Type in your user name or email address and password to login and start.</p>
+      <div class="border center">
+        <h1>Sign in</h1>
+
+        <form action="/login" method="post">
+          <p><label for="signin_username">User name or E-Mail</label><input type="text" name="signin[username]" id="signin_username" /></p><p><label for="signin_password">Password</label><input type="password" name="signin[password]" id="signin_password" /></p><p><label for="signin_remember">Remember</label><input type="checkbox" name="signin[remember]" id="signin_remember" /><input type="hidden" name="signin[_csrf_token]" value="a0cc1bb3537aa48bbb7e9e1710403567" id="signin__csrf_token" /></p>
+
+          <p class="center"><input type="image" src="images/sign-in.gif" value="Signin"/></p>
+        </form>  
+      </div>
+    </div>
+  </div>
+</body>
+</html>
