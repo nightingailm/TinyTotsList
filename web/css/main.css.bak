@@ -1,0 +1,4 @@
+label {
+  vertical-align: top;
+  font-weight: bold;
+}

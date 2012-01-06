@@ -1,0 +1,17 @@
+#BarbaraClass:
+#  columns:
+#    title: { type: string(255), notnull: true }
+
+BarbaraList:
+  actAs: { Timestampable: ~ }
+  #columns:
+
+BarbaraStudent:
+  columns:
+    name: { type: string(255), notnull: true }
+    list_id: { type: integer, notnull: true }
+  relations:
+    BarbaraList:
+      local: list_id
+      foreign: id
+      foreignAlias: Students

@@ -1,0 +1,27 @@
+Options +FollowSymLinks +ExecCGI
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # we skip all files in /web
+  RewriteCond %{REQUEST_URI} ^/web/
+  RewriteRule .* - [L]
+  
+  # we rewrite all other files with .something to /web
+  RewriteCond %{REQUEST_URI} \..+$
+  RewriteCond %{REQUEST_URI} !\.html$
+  RewriteRule ^(.*)$ /web/$1 [L]
+  
+  # !!! UNTESTED !!! ##################################
+  # we check if the .html version is in /web (caching)
+  RewriteRule ^$ /web/index.html [QSA]
+  RewriteRule ^([^.]+)$ /web/$1.html [QSA]
+  #####################################################
+  
+  # no, so we redirect to our front web controller
+  RewriteRule ^(.*)$ /web/index.php [QSA,L]
+  
+</IfModule>
+
+# big crash from our front web controller
+ErrorDocument 500 "<h2>Application error</h2>symfony application failed to start properly"

@@ -1,0 +1,43 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /
+  param: { module: list, action: index }
+
+# list_new:
+#   url:   /lists/new
+#   param: { module: list, action: new }
+#   requirements: { sf_method: get }
+list_save:
+  url:   /list/save
+  param: { module: list, action: save }
+  requirements: { sf_method: post }
+list_print:
+  url:   /lists/:id/print
+  class: sfDoctrineRoute
+  options: { model: BarbaraList, type: object }
+  param: { module: list, action: print }
+list_edit:
+  url:   /list/:id
+  class: sfDoctrineRoute
+  options: { model: BarbaraList, type: object }
+  param: { module: list, action: index }
+  requirements: { sf_method: get }
+# lists:
+#   url:   /lists
+#   param: { module: list, action: all }
+#   requirements: { sf_method: get }
+# list:
+#   url:     /list/:id
+#   class:   sfDoctrineRoute
+#   options: { model: BarbaraList, type: object }
+#   param:   { module: list, action: show }
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }

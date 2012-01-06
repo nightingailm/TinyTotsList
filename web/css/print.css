@@ -1,0 +1,37 @@
+body {
+  font: 11pt "Times New Roman";
+  margin: 0px;
+  padding: 0px;
+}
+table.students {
+  border-collapse: collapse;
+}
+table.students td {
+  border: 1px solid black;
+  padding: 2px 5px;
+}
+p {
+  margin: 0px;
+  padding: 0px;
+}
+.landscape {
+  width: 1145px;
+  overflow: hidden;
+}
+
+@page
+{
+  /*size: landscape;*/
+  margin: 0px;
+  /*font-size: 7px;*/
+}
+
+@media screen {
+  .landscape {
+  }
+}
+@media print {
+  .print-button {
+    display: none;
+  }
+}
