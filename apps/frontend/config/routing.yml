@@ -5,6 +5,7 @@
 homepage:
   url:   /
   param: { module: list, action: index }
+  requirements: { sf_method: get }
 
 # list_new:
 #   url:   /lists/new

@@ -31,6 +31,7 @@ class ClassListForm extends BaseForm
       $students = str_replace(array("\r\n", "\r"), "\n", $students);
       $students = trim($students);
       $this->students = explode("\n", $students);
+      sort($this->students);
       return true;
     }
     else
